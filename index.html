@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>El Justo Juez - Artículos Religiosos</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    :root {
+      --fondo: #f6f1e7;
+      --panel: #fffaf0;
+      --borde: #d4c2a3;
+      --primario: #4b3a2b;
+      --secundario: #c29a56;
+    }
+
+    body { font-family: Arial, sans-serif; margin: 0; background:var(--fondo); color:#333; }
+    header { background:var(--primario); color:#fff; padding:20px; text-align:center; }
+    header h1 { margin:5px 0 0; letter-spacing:1px; }
+    header p { margin:5px 0 0; color:var(--secundario); font-weight:bold; }
+
+    nav { background:#2f2418; text-align:center; }
+    nav a {
+      display:inline-block; padding:10px 15px; color:#fff;
+      text-decoration:none; font-size:14px;
+    }
+    nav a:hover { background:var(--secundario); }
+
+    .contenedor { max-width:1100px; margin:0 auto; padding:20px; }
+
+    section {
+      margin-bottom:30px; background:var(--panel); padding:20px;
+      border-radius:8px; border:1px solid var(--borde);
+      box-shadow:0 2px 4px rgba(0,0,0,0.05);
+    }
+
+    h2 { margin-top:0; color:var(--primario); }
+
+    .grid-productos {
+      display:grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap:15px;
+    }
+
+    .item-producto {
+      border:1px solid var(--borde);
+      border-radius:8px;
+      padding:10px;
+      background:#fbf6eb;
+    }
+
+    .item-producto img {
+      width:100%;
+      max-height:180px;
+      object-fit:cover;
+      border-radius:6px;
+      margin-bottom:8px;
+    }
+
+    .item-producto h3 {
+      margin:0 0 5px;
+      font-size:16px;
+      color:var(--primario);
+    }
+
+    .precio {
+      margin:0 0 6px;
+      font-weight:bold;
+      color:var(--secundario);
+    }
+
+    .item-producto label {
+      font-size:13px;
+      display:block;
+      margin-bottom:6px;
+    }
+
+    .item-producto input[type="number"] {
+      width:60px;
+      padding:3px;
+    }
+
+    .btn-agregar {
+      background:var(--primario);
+      color:#fff;
+      border:none;
+      padding:6px 10px;
+      border-radius:4px;
+      cursor:pointer;
+      font-size:13px;
+    }
+    .btn-agregar:hover { background:var(--secundario); }
+
+    .contacto p { margin:5px 0; }
+
+    #carrito p { margin:3px 0; font-size:14px; }
+
+    #btn-finalizar {
+      margin-top:10px;
+      background:#25d366;
+      color:#fff;
+      border:none;
+      padding:8px 12px;
+      border-radius:4px;
+      cursor:pointer;
+      font-weight:bold;
+    }
+    #btn-finalizar:hover { background:#1da853; }
+
+    footer {
+      text-align:center; padding:15px; font-size:12px;
+      background:#2f2418; color:#fff;
+    }
+
+    .logo { max-width:140px; margin:0 auto; }
+    .logo img { width:100%; display:block; border-radius:8px; }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">
+    <img src="logo-justo-juez.jpg" alt="Logo El Justo Juez">
+  </div>
+  <h1>El Justo Juez</h1>
+  <p>Fe y devoción en cada detalle</p>
+</header>
+
+<nav>
+  <a href="#nosotros">Quiénes somos</a>
+  <a href="#productos">Productos</a>
+  <a href="#carrito">Carrito</a>
+  <a href="#contacto">Contacto</a>
+</nav>
+
+<div class="contenedor">
+
+  <section id="nosotros">
+    <h2>Quiénes somos</h2>
+    <p>
+      <strong>El Justo Juez</strong> es un establecimiento dedicado a la comercialización de artículos religiosos,
+      ubicado en la ciudad de Buga, Valle del Cauca. Nuestro objetivo es acompañar la fe y la devoción
+      de nuestros clientes a través de imágenes, símbolos y detalles espirituales de calidad.
+    </p>
+    <p>
+      Somos un negocio de carácter familiar, atendido por su propietario <strong>Eduard Latorre</strong>,
+      comprometido con brindar una atención cercana y respetuosa a peregrinos y habitantes de la ciudad.
+    </p>
+  </section>
+
+  <section id="productos">
+    <h2>Nuestros productos</h2>
+    <p>Selecciona la cantidad de cada producto y agrégalo al carrito para realizar tu pedido por WhatsApp.</p>
+    <div class="grid-productos">
+
+      <!-- Imágenes principales -->
+      <div class="item-producto" data-id="1">
+        <img src="arcangel-san-miguel.jpg" alt="Arcángel San Miguel">
+        <h3>Arcángel San Miguel</h3>
+        <p class="precio" data-precio="320000">$320.000</p>
+        <label>Cantidad:
+          <input type="number" class="cantidad" min="1" value="1">
+        </label>
+        <button class="btn-agregar">Agregar al carrito</button>
+      </div>
+
+      <div class="item-producto" data-id="2">
+        <img src="arcangel-san-gabriel.jpg" alt="Arcángel San Gabriel">
+        <h3>Arcángel San Gabriel</h3>
+        <p class="precio" data-precio="290000">$290.000</p>
+        <label>Cantidad:
+          <input type="number" class="cantidad" min="1" value="1">
+        </label>
+        <button class="btn-agregar">Agregar al carrito</button>
+      </div>
+
+      <div class="item-producto" data-id="3">
+        <img src="arcangel-san-rafael.jpg" alt="Arcángel San Rafael">
+        <h3>Arcángel San Rafael</h3>
+        <p class="precio" data-precio="290000">$290.000</p>
+        <label>Cantidad:
+          <input type="number" class="cantidad" min="1" value="1">
+        </label>
+        <button class="btn-agregar">Agregar al carrito</button>
+      </div>
+
+      <div class="item-producto" data-id="4">
+        <img src="virgen-milagrosa.jpg" alt="Virgen Milagrosa">
+        <h3>Virgen Milagrosa</h3>
+        <p class="precio" data-precio="250000">$250.000</p>
+        <label>Cantidad:
+          <input type="number" class="cantidad" min="1" value="1">
+        </label>
+        <button class="btn-agregar">Agregar al carrito</button>
+      </div>
+
+      <div class="item-producto" data-id="5">
+        <img src="virgen-guadalupe.jpg" alt="Virgen de Guadalupe">
+        <h3>Virgen de Guadalupe</h3>
+        <p class="precio" data-precio="280000">$280.000</p>
+        <label>Cantidad:
+          <input type="number" class="cantidad" min="1" value="1">
+        </label>
+        <button class="btn-agregar">Agregar al carrito</button>
+      </div>
+
+      <!-- Nuevos productos de catálogo -->
+      <div class="item-producto" data-id="6">
+        <img src="aceite-milagroso.jpg" alt="Aceite del Milagroso">
+        <h3>Aceite del Milagroso</h3>
+        <p class="precio" data-precio="22000">$22.000</p>
+        <label>Cantidad:
+          <input type="number" class="cantidad" min="1" value="1">
+        </label>
+        <button class="btn-agregar">Agregar al carrito</button>
+      </div>
+
+      <div class="item-producto" data-id="7">
+        <img src="velon-milagroso.jpg" alt="Velón Milagroso">
+        <h3>Velón Milagroso</h3>
+        <p class="precio" data-precio="18000">$18.000</p>
+        <label>Cantidad:
+          <input type="number" class="cantidad" min="1" value="1">
+        </label>
+        <button class="btn-agregar">Agregar al carrito</button>
+      </div>
+
+      <div class="item-producto" data-id="8">
+        <img src="imanes.jpg" alt="Imanes religiosos">
+        <h3>Imanes religiosos</h3>
+        <p class="precio" data-precio="14000">$14.000</p>
+        <label>Cantidad:
+          <input type="number" class="cantidad" min="1" value="1">
+        </label>
+        <button class="btn-agregar">Agregar al carrito</button>
+      </div>
+
+      <div class="item-producto" data-id="9">
+        <img src="pulsera-rodio-acero.jpg" alt="Pulsera rodio – acero">
+        <h3>Pulsera rodio – acero</h3>
+        <p class="precio" data-precio="25000">$25.000</p>
+        <label>Cantidad:
+          <input type="number" class="cantidad" min="1" value="1">
+        </label>
+        <button class="btn-agregar">Agregar al carrito</button>
+      </div>
+
+      <div class="item-producto" data-id="10">
+        <img src="llaveros.jpg" alt="Llaveros religiosos">
+        <h3>Llaveros religiosos</h3>
+        <p class="precio" data-precio="12000">$12.000</p>
+        <label>Cantidad:
+          <input type="number" class="cantidad" min="1" value="1">
+        </label>
+        <button class="btn-agregar">Agregar al carrito</button>
+      </div>
+
+      <div class="item-producto" data-id="11">
+        <img src="pendones.jpg" alt="Pendones">
+        <h3>Pendones</h3>
+        <p class="precio" data-precio="16000">$16.000</p>
+        <label>Cantidad:
+          <input type="number" class="cantidad" min="1" value="1">
+        </label>
+        <button class="btn-agregar">Agregar al carrito</button>
+      </div>
+
+      <div class="item-producto" data-id="12">
+        <img src="relojes.jpg" alt="Relojes religiosos">
+        <h3>Relojes religiosos</h3>
+        <p class="precio" data-precio="35000">$35.000</p>
+        <label>Cantidad:
+          <input type="number" class="cantidad" min="1" value="1">
+        </label>
+        <button class="btn-agregar">Agregar al carrito</button>
+      </div>
+
+      <div class="item-producto" data-id="13">
+        <img src="novenas.jpg" alt="Novenas">
+        <h3>Novenas</h3>
+        <p class="precio" data-precio="6000">$6.000</p>
+        <label>Cantidad:
+          <input type="number" class="cantidad" min="1" value="1">
+        </label>
+        <button class="btn-agregar">Agregar al carrito</button>
+      </div>
+
+      <div class="item-producto" data-id="14">
+        <img src="estampas.jpg" alt="Estampas">
+        <h3>Estampas</h3>
+        <p class="precio" data-precio="3000">$3.000</p>
+        <label>Cantidad:
+          <input type="number" class="cantidad" min="1" value="1">
+        </label>
+        <button class="btn-agregar">Agregar al carrito</button>
+      </div>
+
+      <div class="item-producto" data-id="15">
+        <img src="recordatorios.jpg" alt="Recordatorios">
+        <h3>Recordatorios</h3>
+        <p class="precio" data-precio="12000">$12.000</p>
+        <label>Cantidad:
+          <input type="number" class="cantidad" min="1" value="1">
+        </label>
+        <button class="btn-agregar">Agregar al carrito</button>
+      </div>
+
+      <div class="item-producto" data-id="16">
+        <img src="cuadros.jpg" alt="Cuadros religiosos">
+        <h3>Cuadros religiosos</h3>
+        <p class="precio" data-precio="25000">$25.000</p>
+        <label>Cantidad:
+          <input type="number" class="cantidad" min="1" value="1">
+        </label>
+        <button class="btn-agregar">Agregar al carrito</button>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="carrito">
+    <h2>Carrito de compras</h2>
+    <div id="lista-carrito"></div>
+    <p><strong>Total:</strong> $<span id="total">0</span></p>
+    <button id="btn-finalizar">Finalizar compra por WhatsApp</button>
+  </section>
+
+  <section id="contacto" class="contacto">
+    <h2>Contacto</h2>
+    <p><strong>Nombre del establecimiento:</strong> El Justo Juez</p>
+    <p><strong>Propietario:</strong> Eduard Latorre</p>
+    <p><strong>Dirección:</strong> Calle 4 # 17-74, Avenida del Milagroso, Buga, Valle del Cauca</p>
+    <p><strong>Horario de atención:</strong> De lunes a domingo de 8:00 a.m. a 6:00 p.m.</p>
+    <p><strong>Celular / WhatsApp:</strong> 302 675 2796</p>
+    <p>Te esperamos con devocionales, recordatorios y artículos especiales para cada intención y momento de fe.</p>
+  </section>
+
+</div>
+
+<footer>
+  &copy; 2026 El Justo Juez · Todos los derechos reservados
+</footer>
+
+<script>
+  const carrito = [];
+
+  function actualizarCarrito() {
+    const contenedor = document.getElementById('lista-carrito');
+    const totalSpan = document.getElementById('total');
+    contenedor.innerHTML = '';
+    let total = 0;
+
+    carrito.forEach(item => {
+      const fila = document.createElement('p');
+      const subtotal = item.precio * item.cantidad;
+      total += subtotal;
+      fila.textContent = item.nombre + ' x ' + item.cantidad +
+                         ' = $' + subtotal.toLocaleString('es-CO');
+      contenedor.appendChild(fila);
+    });
+
+    totalSpan.textContent = total.toLocaleString('es-CO');
+  }
+
+  document.querySelectorAll('.btn-agregar').forEach(boton => {
+    boton.addEventListener('click', () => {
+      const tarjeta = boton.closest('.item-producto');
+      const id = tarjeta.dataset.id;
+      const nombre = tarjeta.querySelector('h3').textContent;
+      const precio = Number(tarjeta.querySelector('.precio').dataset.precio);
+      const cantidad = Number(tarjeta.querySelector('.cantidad').value);
+
+      if (cantidad <= 0) {
+        alert('La cantidad debe ser al menos 1.');
+        return;
+      }
+
+      const existente = carrito.find(p => p.id === id);
+      if (existente) {
+        existente.cantidad += cantidad;
+      } else {
+        carrito.push({ id, nombre, precio, cantidad });
+      }
+
+      actualizarCarrito();
+      alert('Producto agregado al carrito');
+    });
+  });
+
+  document.getElementById('btn-finalizar').addEventListener('click', () => {
+    if (carrito.length === 0) {
+      alert('El carrito está vacío');
+      return;
+    }
+
+    let mensaje = 'Hola, soy un cliente de la página El Justo Juez y quiero hacer este pedido:%0A';
+    carrito.forEach(item => {
+      mensaje += '- ' + item.nombre + ' x ' + item.cantidad + '%0A';
+    });
+
+    const url = 'https://wa.me/573026752796?text=' + mensaje;
+    window.open(url, '_blank');
+  });
+</script>
+
+</body>
+</html>
